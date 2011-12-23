@@ -1,0 +1,1053 @@
+/* =====================================================================
+Template:	OneWeb for Joomla 1.7						            
+Author: 	Seth Warburton - Internet Inspired! - @nternetinspired 				            
+Version: 	0.1 											             
+Created: 	Dec 2011                                                    
+Copyright:	Seth Warburton - (C) 2011 - All rights reserved
+Sources:	http://cssgrid.net/
+			http://construct-framework.com/
+			http://html5boilerplate.com/
+			http://stuffandnonsense.co.uk/projects/320andup/						         
+License: 	http://creativecommons.org/licenses/MIT/
+/* ===================================================================== */
+
+/*
+1 ROOT
+2 GRID
+3 HEADINGS
+4 TYPOGRAPHY
+5 LINKS
+6 FIGURES & IMAGES
+7 TABLES
+8 FORMS
+9 LOGO
+10 NAVIGATION
+11 BANNER
+12 CONTENT
+13 MAIN
+14 COMPLEMENTARY
+15 CONTENTINFO
+16 HELPERS
+17 VENDOR-SPECIFIC 
+18 MODERNIZR
+19 JOOMLA SPECIFICS
+20 TEMPLATE STYLES
+21 MEDIA QUERIES
+
+COLOURS:
+ 
+*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    line-height: 1;
+    font-family: inherit;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block
+}
+audio[controls],
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+/* 1 ROOT 					============================================================================= */
+html {
+    overflow-y: scroll;
+    background: #fff;
+    background: #fff;
+    font-size: 62.5%;
+}
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: Cambria, Georgia, Times, "Times New Roman";
+    color: #555;
+    background-color: transparent;
+}
+button,
+.button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #404040;
+}
+/* 2 GRID	 				============================================================================= */
+.container { padding: 0 1em;}
+.row {padding: 2em 0;}
+/* 3 HEADINGS 				============================================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+h1,
+.componentheading {
+    margin-bottom: 0.75em;
+    font-size: 48px;
+    font-size: 4.8rem;
+    line-height: 1.2;
+}
+h2 {
+    margin-bottom: 0.75em;
+    font-size: 32px;
+    font-size: 3.2rem;
+    line-height: 1.2;
+}
+h3 {
+    margin-bottom: 1em;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1.3;
+}
+h4 {
+    margin-bottom: 1em;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.25;
+}
+h5 {
+    margin-bottom: 1.5em;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+h6 {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+/* 4 TYPOGRAPHY 			============================================================================= */
+body.arial{font-family:Arial, Helvetica, sans-serif}
+body.arial-black{font-family:Arial Black, Gadget, sans-serif}
+body.courier{font-family:"Courier New", Courier, monospace}
+body.georgia{font-family:Georgia, serif}
+body.helvetica{font-family:Helvetica,Arial,FreeSans,sans-serif;}
+body.impact{font-family:Impact, Charcoal, sans-serif}
+body.lucida-console{font-family:"Lucida Console", Monaco, monospace}
+body.lucida-grande{font-family:"Lucida Grande",Lucida,Verdana,sans-serif}
+body.lucida-sans{font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif}
+body.palatino{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif}
+body.tahoma{font-family:Tahoma, Geneva, sans-serif}
+body.times{font-family:"Times New Roman", Times, serif}
+body.trebuchet{font-family:"Trebuchet MS", Helvetica, sans-serif}
+body.verdana{font-family:Verdana, Geneva, sans-serif}
+
+.sans-serif {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+}
+.serif {
+    font-family: "Cambria, Georgia, Times, " Times New Roman
+}
+.monospace {
+    font-family: "Monaco",Courier New,monospace
+}
+p,
+ol,
+ul,
+dl,
+address {
+    margin-bottom: 1.5em;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+p {
+    hyphens: auto;
+}
+ul,
+ol {
+    margin: 0 0 1.5em -24px;
+    padding: 0 0 0 24px;
+}
+ul.menu {
+	padding:0;
+	margin:0;
+}
+ul.menu li,
+.actions ul li {
+	list-style-type:none;
+}
+li ul,
+li ol {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+dl,
+dd {
+    margin-bottom: 1.5em
+}
+dt {
+    font-weight: normal
+}
+blockquote {
+    margin: 0 0 1.5em -24px;
+    padding-left: 24px;
+    border-left: 1px solid #bfbfbf;
+    font-style: italic;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+b,
+strong {
+    font-weight: bold
+}
+dfn {
+    font-style: italic
+}
+hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #bfbfbf;
+}
+ins {
+    background-color: #c3d9e6;
+    color: #000000;
+    text-decoration: none;
+}
+mark {
+    background-color: #c3d9e6;
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
+}
+pre,
+code,
+kbd,
+samp {
+    font-family: "Monaco",Courier New,monospace;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+q {
+    quotes: none
+}
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+small {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+sub,
+sup {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em
+}
+sub {
+    bottom: -0.25em
+}
+/* 5 LINKS 					============================================================================= */
+a {
+    color: #013568
+}
+a:visited {
+    color: #011b35
+}
+a:hover {
+    color: #011b35
+}
+a:focus {
+    outline: thin dotted;
+    color: #011b35;
+}
+a:hover,
+a:active {
+    outline: 0
+}
+/* 6 FIGURES & IMAGES 		============================================================================= */
+figure {
+    margin-bottom: 1.5em
+}
+figure img,
+figure object,
+figure embed {
+    margin-bottom: 0.75em;
+    max-width: 100%;
+}
+figcaption {
+    display: block;
+    font-weight: normal;
+}
+img {
+    border: 0
+}
+svg:not(:root) {
+    overflow: hidden
+}
+/* 7 TABLES 				============================================================================= */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.5em;
+    width: 100%;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+th,
+td,
+caption {
+    padding: 0.1875em 10px 0.1875em 5px
+}
+tfoot {
+    font-style: italic
+}
+caption {
+    background-color: transparent
+}
+tbody tr:nth-child(odd) td {
+    background-color: #c3d9e6
+}
+/* 8 FORMS 					============================================================================= */
+form { margin : 0 }
+fieldset {
+    margin-bottom : 1.5em;
+    padding : 0;
+    border-width : 0;
+}
+legend {
+    *margin-left: -7px;
+    padding : 0;
+    border-width : 0;
+	color: #777;
+}
+label {
+	font-size: 80%;
+    font-weight: normal;
+	text-transform: uppercase;
+    cursor : pointer;
+	color: #777;
+}
+button,
+input,
+select,
+textarea {
+    font-size : 100%;
+    margin : 0;
+    vertical-align : baseline;
+    *vertical-align: middle;
+}
+button,
+input {
+    line-height : normal;
+	font-weight:normal;
+    *overflow: visible;
+}
+input,
+textarea {
+	background:#fff;
+	color:#777;
+	border:1px solid #ccc;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    border-radius: .25em;
+	text-align:center;
+	min-height: 2em;
+}
+
+button,
+.button a,
+a.button,
+ul.pagenav li a,
+input.button,
+input[type="button"],
+input[type="submit"] {
+	cursor : pointer;
+	display: inline-block;
+    position: relative;
+	text-align:center;
+    margin: 1em 0;
+	padding: .75em 1em;
+	background-color: #e6e6e6;
+	background-repeat: no-repeat;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb; 
+	-webkit-border-radius: .25em;
+	-moz-border-radius: .25em;
+	border-radius: .25em;
+	-webkit-transition: 0.1s linear all;
+	-moz-transition: 0.1s linear all;
+	-ms-transition: 0.1s linear all;
+	-o-transition: 0.1s linear all;
+  	transition: 0.1s linear all;
+  }
+
+button:hover,
+.button a:hover,
+a.button:hover,
+ul.pagenav li a:hover,
+input.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-position: 0 -.5em;
+  text-decoration: none;
+}
+
+button:active,
+.button a:active,
+a.button:active,
+ul.pagenav li a:active,
+input.button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+    color: #fff;
+    top: 1px;
+    background: rgb(30,156,31);
+    text-shadow: 0px 1px 0px rgba(0,0,0,.4);
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding : 0;
+    border : 0;
+}
+textarea {
+    overflow : auto;
+    vertical-align : top;
+}
+input[type="text"],
+input[type="email"],
+textarea
+ {
+    line-height: 1.5em;
+    width: 100%;
+}
+/* Colors for form validity */
+input:valid, 
+textarea:valid   {
+	-webkit-box-shadow : none; 
+-moz-box-shadow : none;
+box-shadow : none; }	
+
+/* 9 LOGO	 				============================================================================= */
+#logo a {
+	font-size: 32px;
+	font-size:3.2rem;
+	text-decoration: none;
+}
+	
+/* 10 NAVIGATION			============================================================================= */
+/* main menu styles */
+.no-js #mobileMenu {display:none;}
+a#mobileMenu.button {
+	width:100%;
+	padding: .75em 0;
+}
+#menu {
+	margin:0 0 1em;
+}
+nav ul.menu {
+	padding:0;
+	margin:0;
+	border-bottom:1px solid #eee;
+}
+ul.menu li {list-style-type:none;}
+nav ul.menu li a {
+	display:block;
+	padding:.5em .25em;
+	border-top:1px solid #eee;
+	text-align:center;
+}
+/* search styling */
+#search {
+	display:block;
+	text-align:center;
+}
+input[type="search"], .search label {
+    display: none;
+}
+	
+#breadcrumbs {
+	color:#999;
+}
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* article styling */
+.actions {
+	width:100%;
+}
+.actions ul {
+	float:right;
+	padding:.25em 0 0;
+	margin:0;
+}
+.actions ul li {float:left;}
+aside {
+	color:#bbb;
+	font-style:italic;
+	font-size:12px;
+	font-size:1.2rem;
+	border:solid #eee;
+	border-width:1px 0;
+	margin:0 0 1em 0;
+	padding:.25em 1em;
+}
+.article-readmore {
+	float:right;
+}
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+footer {
+	font-size:1.2rem;
+	color:#777;
+}
+/* 16 HELPERS		 		============================================================================= */
+.clearfix {
+    zoom: 1
+}
+.clearfix:before,
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix:after {
+    clear: both
+}
+.ir {
+    display: block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    text-align: left;
+    text-indent: -999em;
+    direction: ltr;
+}
+.ir br {
+    display: none
+}
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+.visuallyhidden {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    position: static;
+    margin: 0;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    clip: auto;
+}
+.invisible {
+    visibility: hidden
+}
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+html {
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: #c3d9e6;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+::-webkit-selection {
+    background: #e6e6e6;
+    color: #fafafa;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: #7bacc8;
+    color: #c8977b;
+    text-shadow: none;
+}
+::selection {
+    background: #7bacc8;
+    color: #c8977b;
+    text-shadow: none;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button
+}
+::-webkit-input-placeholder {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+input:-moz-placeholder {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+.ie7 img,
+.iem7 img {
+    -ms-interpolation-mode: bicubic
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box
+}
+input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+p {
+    -webkit-hyphens: auto;
+    -webkit-hyphenate-character: "\2010";
+    -webkit-hyphenate-limit-after: 1;
+    -webkit-hyphenate-limit-before: 3;
+    -moz-hyphens: auto;
+}
+/* 18 MODERNIZR 			============================================================================= */
+/* audio */
+/* applicationcache */
+/* backgroundsize */
+/* borderimage */
+/* borderradius */
+/* boxshadow */
+/* canvas */
+/* canvastext */
+/* cssanimations */
+/* csscolumns */
+/* cssgradients */
+/* cssreflections*/
+/* csstransforms */
+/* csstransforms3d */
+/* csstransitions */
+/* draganddrop */
+/* flexbox */
+/* fontface */
+/* geolocation */
+/* hashchange */
+/* history */
+/* hsla */
+/* indexeddb */
+/* inlinesvg */
+/* localstorage */
+/* multiplebgs */
+/* opacity */
+/* postmessage */
+/* rgba */
+/* sessionstorage */
+/* smil */
+/* svg */
+/* svgclippaths */
+/* textshadow */
+/* touch */
+/* video */
+/* webgl */
+/* websqldatabase */
+/* websockets */
+/* webworkers */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+/* row styles */
+.row {border-bottom:1px solid #ddd;}
+#logoRow .row,
+header .row {border: 0}
+#breadcrumbRow .row {
+	padding: .5em .25em;
+}
+/* 21 MEDIA QUERIES 		============================================================================= */
+
+@media print {
+
+/* 1 ROOT 					============================================================================= */
+*{
+	background:transparent !important;
+	color:black !important;
+	text-shadow:none !important;
+	filter:none !important;
+	-ms-filter:none !important;
+} 
+@page {
+	margin:0.5cm;
+}
+/* 2 GRID	 				============================================================================= */
+/* 3 HEADINGS 				============================================================================= */
+h2,
+h3 {
+	orphans:3;
+	widows:3;
+	page-break-after:avoid;
+}
+/* 4 TYPOGRAPHY 				============================================================================= */
+p {
+	orphans:3;
+	widows:3;
+}
+pre,
+blockquote {
+	border:1px solid #808080;
+	page-break-inside:avoid;
+} 
+abbr[title]:after {
+	content:" (" attr(title) ")";
+}
+/* 5 LINKS 					============================================================================= */
+a,
+a:visited {
+	color:#000000 !important;
+	text-decoration:underline;
+}
+a[href]:after {
+	content:" (" attr(href) ")";
+} 
+a[href^="javascript:"]:after,a[href^="#"]:after {
+	content:"";
+}
+/* 6 FIGURES & IMAGES 		============================================================================= */
+img {
+	max-width:100% !important;
+	page-break-inside:avoid;
+}
+/* 7 TABLES 				============================================================================= */
+thead {
+	display:table-header-group;
+} 
+tr {
+	page-break-inside:avoid;
+}
+/* 8 FORMS 					============================================================================= */
+/* 9 LOGO	 				============================================================================= */
+/* 10 NAVIGATION			============================================================================= */
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+/* 16 HELPERS		 		============================================================================= */
+.ir a:after {
+	content:"";
+}
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+/* 18 MODERNIZR 			============================================================================= */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+
+}
+
+/* 480px */
+@media only screen and (min-width: 480px) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 GRID	 				============================================================================= */
+/* 3 HEADINGS 				============================================================================= */
+/* 4 TYPOGRAPHY 			============================================================================= */
+/* 5 LINKS 					============================================================================= */
+/* 6 FIGURES & IMAGES 		============================================================================= */
+/* 7 TABLES 				============================================================================= */
+/* 8 FORMS 					============================================================================= */
+/* 9 LOGO	 				============================================================================= */
+/* 10 NAVIGATION			============================================================================= */
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+/* 16 HELPERS		 		============================================================================= */
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+/* 18 MODERNIZR 			============================================================================= */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+
+}
+
+/* 600px */
+@media only screen and (min-width: 600px) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 GRID	 				============================================================================= */
+/* 3 HEADINGS 				============================================================================= */
+/* 4 TYPOGRAPHY 			============================================================================= */
+/* 5 LINKS 					============================================================================= */
+/* 6 FIGURES & IMAGES 		============================================================================= */
+/* 7 TABLES 				============================================================================= */
+/* 8 FORMS 					============================================================================= */
+/* 9 LOGO	 				============================================================================= */
+/* 10 NAVIGATION			============================================================================= */
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+/* 16 HELPERS		 		============================================================================= */
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+/* 18 MODERNIZR 			============================================================================= */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+
+}
+
+/* 768px */
+@media only screen and (min-width: 768px) {
+
+/* 1 ROOT 					============================================================================= */
+body {
+	width:100%;
+}
+/* 2 GRID	 				============================================================================= */
+.container { padding: 0 2em }
+.row {
+	margin: 0 auto;
+	padding: 3em .25em;
+	overflow: hidden;
+	max-width:1140px;
+}
+.onecol,
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol {
+	margin-right: 3.8%;
+	padding-left: 0;
+	padding-right: 0;
+	float: left;
+	min-height: 1px;
+}
+.onecol { width: 4.85% }
+.twocol { width: 13.45% }
+.threecol { width: 22.05% }
+.fourcol { width: 30.75% }
+.fivecol { width: 39.45% }
+.sixcol { width: 48% }
+.sevencol { width: 56.75% }
+.eightcol { width: 65.4% }
+.ninecol { width: 74.05% }
+.tencol { width: 82.7% }
+.elevencol { width: 91.35% }
+.twelvecol {
+	width: 100%;
+	float: left;
+}
+.last { margin-right: 0px }
+/* 3 HEADINGS 				============================================================================= */
+/* 4 TYPOGRAPHY 			============================================================================= */
+/* 5 LINKS 					============================================================================= */
+/* 6 FIGURES & IMAGES 		============================================================================= */
+/* 7 TABLES 				============================================================================= */
+/* 8 FORMS 					============================================================================= */
+/* 9 LOGO	 				============================================================================= */
+/* 10 NAVIGATION			============================================================================= */
+nav ul.menu,
+nav ul.menu li a {
+	border:0;
+}
+nav ul.menu li a,
+header #search {
+	display:inline-block;
+	float:left;
+}
+
+.mobile {
+	display:none !important;
+}
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+/* 16 HELPERS		 		============================================================================= */
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+/* 18 MODERNIZR 			============================================================================= */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+
+}
+
+/* 992px */
+@media only screen and (min-width: 992px) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 GRID	 				============================================================================= */
+/* 3 HEADINGS 				============================================================================= */
+/* 4 TYPOGRAPHY 			============================================================================= */
+/* 5 LINKS 					============================================================================= */
+/* 6 FIGURES & IMAGES 		============================================================================= */
+/* 7 TABLES 				============================================================================= */
+/* 8 FORMS 					============================================================================= */
+/* 9 LOGO	 				============================================================================= */
+/* 10 NAVIGATION			============================================================================= */
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+/* 16 HELPERS		 		============================================================================= */
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+/* 18 MODERNIZR 			============================================================================= */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+
+}
+
+/* 1382px */
+@media only screen and (min-width: 1382px) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 GRID	 				============================================================================= */
+/* 3 HEADINGS 				============================================================================= */
+/* 4 TYPOGRAPHY 			============================================================================= */
+/* 5 LINKS 					============================================================================= */
+/* 6 FIGURES & IMAGES 		============================================================================= */
+/* 7 TABLES 				============================================================================= */
+/* 8 FORMS 					============================================================================= */
+/* 9 LOGO	 				============================================================================= */
+/* 10 NAVIGATION			============================================================================= */
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+/* 16 HELPERS		 		============================================================================= */
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+/* 18 MODERNIZR 			============================================================================= */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+
+}
+
+/* 2x */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (-o-min-device-pixel-ratio: 3/2), 
+only screen and (min-device-pixel-ratio: 1.5) {
+
+/* 1 ROOT 					============================================================================= */
+/* 2 GRID	 				============================================================================= */
+/* 3 HEADINGS 				============================================================================= */
+/* 4 TYPOGRAPHY 			============================================================================= */
+/* 5 LINKS 					============================================================================= */
+/* 6 FIGURES & IMAGES 		============================================================================= */
+/* 7 TABLES 				============================================================================= */
+/* 8 FORMS 					============================================================================= */
+/* 9 LOGO	 				============================================================================= */
+/* 10 NAVIGATION			============================================================================= */
+/* 11 BANNER 				============================================================================= */
+/* 12 CONTENT 				============================================================================= */
+/* 13 MAIN 					============================================================================= */
+/* 14 COMPLEMENTARY 		============================================================================= */
+/* 15 CONTENTINFO 			============================================================================= */
+/* 16 HELPERS		 		============================================================================= */
+/* 17 VENDOR-SPECIFIC 		============================================================================= */
+/* 18 MODERNIZR 			============================================================================= */
+/* 19 JOOMLA SPECIFICS 		============================================================================= */
+/* 20 TEMPLATE STYLES 		============================================================================= */
+
+}

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.7" type="template" client="site">
+	<name>OneWeb</name>
+	<creationDate>December 15th, 2011</creationDate>
+	<author>Seth Warburton</author>
+	<authorEmail>seth@internet-inspired.com</authorEmail>
+	<authorUrl>http://internet-inspired.com</authorUrl>
+	<copyright>Copyright (C) 2011 Seth Warburton | Internet Inspired! All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>0.1</version>	
+	<description><![CDATA[
+	<p>One Web! is a responsive, 'mobile first' HTML5 template from <a href="http://internet-inspired.com">Internet Inspired!</a>.</p><p>It incorporates the hard work of others (proper coders, unlike me), I just rolled it all together and added some spit and polish to it. Notably, this template takes the HTML5 goodness polyfills from the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> of Paul Irish, the mobile first logic and some sexy typographic basics from <a href="http://cssgrid.net/">320 and up</a> by Andy Clarke, some really neat Joomla! tricks and Google Font awesomeness from Matt Thomas' <a href="http://construct-framework.com/">Construct Framework</a>, a fluid <a href="http://cssgrid.net/">1140px Grid</a> grid from Andy Taylor.</p><p>What's left is the work of Seth Warburton @nternetinspired</p>
+	]]></description>
+		
+	<files>
+        <filename>favicon.ico</filename>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>functions</folder>
+		<folder>html</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+	</files>
+	
+	<positions>
+		<position>logo</position>
+		<position>tagline</position>
+		<position>menu</position>
+		<position>tagline</position>
+		<position>banner1</position>
+		<position>banner2</position>
+		<position>breadcrumbs</position>
+		<position>above1</position>		
+		<position>above2</position>
+		<position>above3</position>
+		<position>above4</position>
+		<position>left</position>
+		<position>main</position>
+		<position>right</position>
+		<position>below1</position>		
+		<position>below2</position>
+		<position>below3</position>
+		<position>below4</position>
+		<position>bottom1</position>		
+		<position>bottom2</position>
+		<position>bottom3</position>
+		<position>bottom4</position>
+		<position>mobile-menu</position>
+		<position>footer1</position>		
+		<position>footer2</position>
+		<position>footer3</position>
+	</positions>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="Customise Joomla! output" label="Customise Joomla! output" addfieldpath="/templates/oneweb/functions" >
+				<field name="loadMoo" type="radio" default="0" label="Load MooTools?" description="Load the MooTools JavaScript library that is included with Joomla? If it is not in use you can save a few Kb by not loading it. Setting this to no will also disable caption.js">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" default=" " />
+				<field name="jQuery" type="radio" default="1" label="Load jQuery?" description="Load the latest, minified, version of jQuery from Google (with fallback to local version)?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" default=" " />
+			<field name="setGeneratorTag" type="text" default="Internet Inspired! - Creative Joomla! templates - http://internet-inspired.com" label="Generator Meta Tag" description="Customise the generator meta tag output by your template." size="85" />
+			<field name="analytics" type="text" default="UA-XXXXX-X" label="Google Analytics ID" description="Change UA-XXXXX-X to be your site's ID" size="15" />
+			</fieldset>				
+		
+			<fieldset name="Typography" label="Typography">					
+						<param type="panel" title="Typography" />
+				<field name="bodyFontFamily" type="list" default="georgia" label="The Body Font">
+					<option value="">- None Selected -</option>
+					<option value="arial">Arial</option>
+					<option value="arial-black">Arial Black</option>
+					<option value="courier">Courier New</option>			
+					<option value="georgia">Georgia</option>
+					<option value="helvetica">Helvetica</option>
+					<option value="impact">Impact</option>			
+					<option value="lucida-console">Lucida Console</option>	
+					<option value="lucida-grande">Lucida Grande</option>								
+					<option value="lucida-sans">Lucida Sans</option>
+					<option value="palatino">Palatino</option>			
+					<option value="tahoma">Tahoma</option>
+					<option value="times">Times New Roman</option>
+					<option value="trebuchet">Trebuchet</option>
+					<option value="verdana">Verdana</option>
+				</field>
+				<field type="spacer" default=" " />				
+				<field name="googleWebFont" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />										
+				<field name="googleWebFontTargets" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
+				<field type="spacer" default=" " />
+				<field name="googleWebFont2" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />										
+				<field name="googleWebFontTargets2" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50"/>		
+				<field type="spacer" default=" " />
+				<field name="googleWebFont3" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />										
+				<field name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />								
+			</fieldset>
+			
+ 			<!-- LogoRow Modules -->
+			<fieldset name="Logo Row Module Widths" label="Logo Row Module Widths">
+                <field name="logo" type="list" default="three" label="logo width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+							
+			<field name="menu" type="list" default="nine" label="navigation width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				
+			<field name="search" type="list" default="three" label="search width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset> 			
+
+			 <!-- bannerRow Modules -->
+			<fieldset name="Banner Row Module Widths" label="Banner Row Module Widths">
+                <field name="banner1" type="list" default="six" label="Banner 1 width" >
+					<option value="">- None -</option>
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="banner2" type="list" default="six" label="Banner 2 width" >
+					<option value="">- None -</option>
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset> 
+			
+			<!-- aboveRow Modules -->
+			<fieldset name="Above Row Module Widths" label="Above Row Module Widths">
+                <field name="above1" type="list" default="three" label="above 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="above2" type="list" default="three" label="above 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="above3" type="list" default="three" label="above 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="above4" type="list" default="three" label="above 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>	
+			
+			            <!-- MainRow Modules -->
+			<fieldset name="Main Row Module Widths" label="Main Row Module Widths">
+                <field name="left" type="list" default="three" label="left width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="main" type="list" default="six" label="main width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="right" type="list" default="three" label="right width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset>	
+	
+			<!-- belowRow Modules -->
+			<fieldset name="Below Row Module Widths" label="Below Row Module Widths">
+                <field name="below1" type="list" default="three" label="below 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="below2" type="list" default="three" label="below 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="below3" type="list" default="three" label="below 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="below4" type="list" default="three" label="below 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>	
+			
+			<!-- bottomRow Modules -->
+			<fieldset name="bottom Row Module Widths" label="bottom Row Module Widths">
+                <field name="bottom1" type="list" default="three" label="bottom 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="bottom2" type="list" default="three" label="bottom 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="bottom3" type="list" default="three" label="bottom 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="bottom4" type="list" default="three" label="bottom 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>
+	
+		            <!-- footer Modules -->
+			<fieldset name="Footer Row Module Widths" label="Footer Row Module Widths">
+                <field name="footer1" type="list" default="three" label="footer 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="footer2" type="list" default="six" label="footer 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="footer3" type="list" default="three" label="footer 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset>	
+		</fields>
+	</config>
+</extension>
