@@ -275,7 +275,6 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <jdoc:include type="modules" name="debug"/>
 
 <!-- Scripts -->
-<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>"></script>
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/scripts.js"></script>
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/plugins.js"></script>
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/mylibs/helper.js"></script>
