@@ -14,19 +14,20 @@ $loadMoo 				= $this->params->get('loadMoo');
 $jQuery 				= $this->params->get('jQuery');
 $setGeneratorTag		= $this->params->get('setGeneratorTag');
 $analytics 				= $this->params->get('analytics');
-$colorStyle				= $this->params->get('colorStyle');
 
 #-----------------------------Lets get the info we need for the grid-----------------------------#
 // Check for modules in columns
 // from http://groups.google.com/group/joomla-dev-general/bse_thread/thread/b54f3f131dd173d
 
-$banner1 = (int) ($this->countModules('banner1') > 0);
-$banner2 = (int) ($this->countModules('banner2') > 0);
-$menu = (int) ($this->countModules('menu') > 0);
+$logo = (int) ($this->countModules('logo') > 0);
+$tagline = (int) ($this->countModules('tagline') > 0);
 $search = (int) ($this->countModules('search') > 0);
 
-$logo = (int) ($this->countModules('logo') > 0);
-$logo = (int) ($this->countModules('logo') > 0);
+$menu = (int) ($this->countModules('menu') > 0);
+$breadcrumbs = (int) ($this->countModules('breadcrumbs') > 0);
+
+$banner1 = (int) ($this->countModules('banner1') > 0);
+$banner2 = (int) ($this->countModules('banner2') > 0);
 
 $above1 = (int) ($this->countModules('above1') > 0);
 $above2 = (int) ($this->countModules('above2') > 0);
@@ -36,7 +37,6 @@ $above4 = (int) ($this->countModules('above4') > 0);
 $left = (int) ($this->countModules('left') > 0);
 $right = (int) ($this->countModules('right') > 0);
 $right = (int) ($this->countModules('right') > 0);
-$panel = (int) ($this->countModules('panel') > 0);
 
 $below1 = (int) ($this->countModules('below1') > 0);
 $below2 = (int) ($this->countModules('below2') > 0);
@@ -48,27 +48,24 @@ $bottom2 = (int) ($this->countModules('bottom2') > 0);
 $bottom3 = (int) ($this->countModules('bottom3') > 0);
 $bottom4 = (int) ($this->countModules('bottom4') > 0);
 
-$icons = (int) ($this->countModules('icons') > 0);
-
 $footer1 = (int) ($this->countModules('footer1') > 0);
 $footer2 = (int) ($this->countModules('footer2') > 0);
 $footer3 = (int) ($this->countModules('footer3') > 0);
 $footer4 = (int) ($this->countModules('footer4') > 0);
 
 // Get the column widths	
-$banner1Cols = $this->params->get('banner1', 'six');
-$banner2Cols = $this->params->get('banner2', 'six');
-
-$menuCols = $this->params->get('menu', 'six');
-$searchCols = $this->params->get('search', 'three');
-
 $logoCols = $this->params->get('logo', 'three');
 $taglineCols = $this->params->get('tagline', 'nine');
+$searchCols = $this->params->get('search', 'three');
+
+$banner1Cols = $this->params->get('banner1', 'six');
+$banner2Cols = $this->params->get('banner2', 'six');
 
 $above1Cols = $this->params->get('above1', 'three');
 $above2Cols = $this->params->get('above2', 'three');
 $above3Cols = $this->params->get('above3', 'three');
 $above4Cols = $this->params->get('above4', 'three');
+
 $leftCols = $this->params->get('left', 'three');
 $rightCols = $this->params->get('right', 'three');
 
@@ -78,8 +75,6 @@ $mainCols = 'twelve';
 else {
 	$mainCols = $this->params->get('main', 'nine');
 }
-
-$panelCols = $this->params->get('panel', 'six');
 
 $below1Cols = $this->params->get('below1', 'three');
 $below2Cols = $this->params->get('below2', 'three');
@@ -153,7 +148,7 @@ $googleWebFontFamily 	= str_replace(array('+',':bold',':italic')," ",$googleWebF
 $googleWebFontFamily2 	= str_replace(array('+',':bold',':italic')," ",$googleWebFont2);
 $googleWebFontFamily3 	= str_replace(array('+',':bold',':italic')," ",$googleWebFont3);
 
-// Typography
+// Typography --- font size params removed by Seth Warburton @ http://internet-inspired.com
 if ($googleWebFont) {
 	$doc->addStyleSheet('http://fonts.googleapis.com/css?family='.$googleWebFont.'');
 	$doc->addStyleDeclaration('  '.$googleWebFontTargets.' {font-family:'.$googleWebFontFamily.';}');
@@ -203,5 +198,4 @@ $doc->addCustomTag('<![endif]-->');
 $doc->addCustomTag('<!--[if lt IE 7 ]>');
 $doc->addCustomTag('<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script></script>');
 $doc->addCustomTag('<![endif]-->');
-
 #----------------------------- End head code -----------------------------#

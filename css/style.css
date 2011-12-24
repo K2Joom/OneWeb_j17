@@ -338,17 +338,17 @@ sub {
 }
 /* 5 LINKS 					============================================================================= */
 a {
-    color: #013568
+    color: #f00;
 }
 a:visited {
-    color: #011b35
+    color: #f00;
 }
 a:hover {
-    color: #011b35
+    color: #f33;
 }
 a:focus {
     outline: thin dotted;
-    color: #011b35;
+    color: #700;
 }
 a:hover,
 a:active {
@@ -526,13 +526,27 @@ textarea:valid   {
 box-shadow : none; }	
 
 /* 9 LOGO	 				============================================================================= */
+#logoRow .row {
+	padding-bottom:0;
+}
+#logo {
+	background: url(../img/small/small-logo.png) scroll no-repeat;
+	height:100px;
+	width:200px;
+	margin:0 auto 2em;
+}
 #logo a {
-	font-size: 32px;
-	font-size:3.2rem;
 	text-decoration: none;
 }
+#logotext {
+	text-indent:-999em;
+}
+
 	
 /* 10 NAVIGATION			============================================================================= */
+#navRow .row {
+	padding-top:0;
+}
 /* main menu styles */
 .no-js #mobileMenu {display:none;}
 a#mobileMenu.button {
@@ -594,8 +608,9 @@ aside {
 }
 /* 14 COMPLEMENTARY 		============================================================================= */
 /* 15 CONTENTINFO 			============================================================================= */
-footer {
-	font-size:1.2rem;
+footer,
+footer p{
+	font-size:80%;
 	color:#777;
 }
 /* 16 HELPERS		 		============================================================================= */
@@ -657,18 +672,18 @@ html {
     -ms-text-size-adjust: 100%;
 }
 ::-webkit-selection {
-    background: #e6e6e6;
-    color: #fafafa;
+    background: #f00;
+    color: #fff;
     text-shadow: none;
 }
 ::-moz-selection {
-    background: #7bacc8;
-    color: #c8977b;
+    background: #f00;
+    color: #fff;
     text-shadow: none;
 }
 ::selection {
-    background: #7bacc8;
-    color: #c8977b;
+    background: #f00;
+    color: #fff;
     text-shadow: none;
 }
 button,
@@ -941,11 +956,29 @@ body {
 /* 3 HEADINGS 				============================================================================= */
 /* 4 TYPOGRAPHY 			============================================================================= */
 /* 5 LINKS 					============================================================================= */
+a {
+	position:relative;
+}
+a:hover,
+a:active {
+	top:1px;
+}
 /* 6 FIGURES & IMAGES 		============================================================================= */
 /* 7 TABLES 				============================================================================= */
 /* 8 FORMS 					============================================================================= */
 /* 9 LOGO	 				============================================================================= */
+#logo {
+	background: url(../img/medium/medium-logo.png) scroll no-repeat;
+	height:200px;
+	width:300px;
+	margin:0 0 2em;
+}
 /* 10 NAVIGATION			============================================================================= */
+#navRow .row {
+	border:solid #eee;
+	border-width:1px 0;
+	padding:.25em;
+}
 nav ul.menu,
 nav ul.menu li a {
 	border:0;
@@ -955,9 +988,19 @@ header #search {
 	display:inline-block;
 	float:left;
 }
-
+nav ul.menu li a {
+	padding:.5em 1em;
+	text-decoration:none;
+}
+#menu {
+	margin:0;
+}
 .mobile {
 	display:none !important;
+}
+#search {
+	float:right;
+	margin-top:35px;
 }
 /* 11 BANNER 				============================================================================= */
 /* 12 CONTENT 				============================================================================= */
@@ -984,6 +1027,11 @@ header #search {
 /* 7 TABLES 				============================================================================= */
 /* 8 FORMS 					============================================================================= */
 /* 9 LOGO	 				============================================================================= */
+#logo {
+	background: url(../img/large/large-logo.png) scroll no-repeat;
+	height:200px;
+	width:400px;
+}
 /* 10 NAVIGATION			============================================================================= */
 /* 11 BANNER 				============================================================================= */
 /* 12 CONTENT 				============================================================================= */

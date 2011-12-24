@@ -17,7 +17,6 @@
         <filename>favicon.ico</filename>
         <filename>index.php</filename>
         <filename>templateDetails.xml</filename>
-		<filename>template_thumbnail.png</filename>
 		<folder>css</folder>
 		<folder>fonts</folder>
 		<folder>functions</folder>
@@ -29,11 +28,11 @@
 	<positions>
 		<position>logo</position>
 		<position>tagline</position>
+		<position>search</position>
 		<position>menu</position>
-		<position>tagline</position>
+		<position>breadcrumbs</position>
 		<position>banner1</position>
 		<position>banner2</position>
-		<position>breadcrumbs</position>
 		<position>above1</position>		
 		<position>above2</position>
 		<position>above3</position>
@@ -53,17 +52,18 @@
 		<position>footer1</position>		
 		<position>footer2</position>
 		<position>footer3</position>
+		<position>footer4</position>
 	</positions>
 		
 	<config>
 		<fields name="params">
 			<fieldset name="Customise Joomla! output" label="Customise Joomla! output" addfieldpath="/templates/oneweb/functions" >
-				<field name="loadMoo" type="radio" default="0" label="Load MooTools?" description="Load the MooTools JavaScript library that is included with Joomla? If it is not in use you can save a few Kb by not loading it. Setting this to no will also disable caption.js">
+				<field name="loadMoo" type="radio" default="0" label="Load MooTools?" description="Load the MooTools JavaScript library that is included with Joomla? If it is not in use you can save a lot of Kb by not loading it. Setting this to no will also disable caption.js">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
 				<field type="spacer" default=" " />
-				<field name="jQuery" type="radio" default="1" label="Load jQuery?" description="Load the latest, minified, version of jQuery from Google (with fallback to local version)?">
+				<field name="jQuery" type="radio" default="1" label="Load jQuery?" description="Load the latest, minified, version of jQuery from Google?">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
@@ -73,7 +73,6 @@
 			</fieldset>				
 		
 			<fieldset name="Typography" label="Typography">					
-						<param type="panel" title="Typography" />
 				<field name="bodyFontFamily" type="list" default="georgia" label="The Body Font">
 					<option value="">- None Selected -</option>
 					<option value="arial">Arial</option>
@@ -102,7 +101,6 @@
 				<field name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />								
 			</fieldset>
 			
- 			<!-- LogoRow Modules -->
 			<fieldset name="Logo Row Module Widths" label="Logo Row Module Widths">
                 <field name="logo" type="list" default="three" label="logo width" >
 					<option value="one">one</option>
@@ -119,7 +117,7 @@
 					<option value="twelve">twelve</option>
 				</field>
 							
-			<field name="menu" type="list" default="nine" label="navigation width" >
+			<field name="tagline" type="list" default="six" label="tagline width" >
 					<option value="one">one</option>
 					<option value="two">two</option>
 					<option value="three">three</option>
@@ -150,7 +148,6 @@
 				</field>
 			</fieldset> 			
 
-			 <!-- bannerRow Modules -->
 			<fieldset name="Banner Row Module Widths" label="Banner Row Module Widths">
                 <field name="banner1" type="list" default="six" label="Banner 1 width" >
 					<option value="">- None -</option>
@@ -184,7 +181,6 @@
 				</field>
 			</fieldset> 
 			
-			<!-- aboveRow Modules -->
 			<fieldset name="Above Row Module Widths" label="Above Row Module Widths">
                 <field name="above1" type="list" default="three" label="above 1 width" >
 					<option value="one">one</option>
@@ -244,7 +240,6 @@
 				</field>
             </fieldset>	
 			
-			            <!-- MainRow Modules -->
 			<fieldset name="Main Row Module Widths" label="Main Row Module Widths">
                 <field name="left" type="list" default="three" label="left width" >
 					<option value="one">one</option>
@@ -290,7 +285,6 @@
 				</field>
 			</fieldset>	
 	
-			<!-- belowRow Modules -->
 			<fieldset name="Below Row Module Widths" label="Below Row Module Widths">
                 <field name="below1" type="list" default="three" label="below 1 width" >
 					<option value="one">one</option>
@@ -350,7 +344,6 @@
 				</field>
             </fieldset>	
 			
-			<!-- bottomRow Modules -->
 			<fieldset name="bottom Row Module Widths" label="bottom Row Module Widths">
                 <field name="bottom1" type="list" default="three" label="bottom 1 width" >
 					<option value="one">one</option>
@@ -410,7 +403,6 @@
 				</field>
             </fieldset>
 	
-		            <!-- footer Modules -->
 			<fieldset name="Footer Row Module Widths" label="Footer Row Module Widths">
                 <field name="footer1" type="list" default="three" label="footer 1 width" >
 					<option value="one">one</option>
@@ -441,6 +433,20 @@
 					<option value="twelve">twelve</option>
 				</field>
 				<field name="footer3" type="list" default="three" label="footer 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="footer4" type="list" default="three" label="footer 4 width" >
 					<option value="one">one</option>
 					<option value="two">two</option>
 					<option value="three">three</option>
