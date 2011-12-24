@@ -150,7 +150,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 </div>  
 <?php endif; ?> 
 
-<div id="mainRow" class="<?php echo $siteHome; ?>Page">
+<div id="mainRow">
       <div class="container">
           <div class="row clearfix">                                
                       
