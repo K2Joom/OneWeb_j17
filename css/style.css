@@ -358,18 +358,20 @@ a:active {
 figure {
     margin-bottom: 1.5em
 }
+img,
 figure img,
 figure object,
 figure embed {
     margin-bottom: 0.75em;
     max-width: 100%;
+	height:auto;
 }
 figcaption {
     display: block;
     font-weight: normal;
 }
 img {
-    border: 0
+    border: 0;
 }
 svg:not(:root) {
     overflow: hidden
